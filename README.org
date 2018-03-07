@@ -1,0 +1,16 @@
+* shadow cljs stuff
+
+start from https://github.com/thheller/shadow-cljs-examples/tree/master/electron
+
+run
+
+#+BEGIN_SRC sh :eval never
+yarn shadow-cljs watch main renderer
+#+END_SRC
+
+then
+
+#+BEGIN_SRC sh :eval never
+yarn electron .
+#+END_SRC
+

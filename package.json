@@ -1,0 +1,9 @@
+{
+  "main": "app/main.js",
+  "dependencies": {
+    "electron": "^1.8.3",
+    "mxgraph": "^3.9.3",
+    "shadow-cljs": "^2.2.4",
+    "xml2json": "^0.11.0"
+  }
+}

@@ -1,0 +1,26 @@
+;; shadow-cljs configuration
+;; ref https://github.com/thheller/shadow-cljs-examples/blob/master/electron/shadow-cljs.edn
+{:source-paths
+ ["src"]
+
+ :dependencies
+ []
+
+ :builds
+ {:main
+  {:target :node-script
+   :output-to "app/main.js"
+   :main example.main/main}
+
+  :renderer
+  {:target :browser
+   :output-dir "app/js"
+   :asset-path "js"
+
+   :modules
+   {:renderer {:entries [example.renderer]}}
+
+   :devtools
+   {:before-load example.renderer/stop
+    :after-load example.renderer/start}}
+  }}
