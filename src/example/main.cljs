@@ -7,8 +7,11 @@
 
 (defn create-window []
   (let [win
-        (BrowserWindow. #js {:width 800
-                             :height 600})
+        (BrowserWindow.
+          (clj->js {:width 1000
+                    :height 800
+                    :webPreferences
+                    {:nodeIntegration true}}))
 
         url
         (url/format #js {:pathname (path/join js/__dirname "index.html")
